@@ -45,6 +45,7 @@ def compute_gini(model):
 class MoneyModel(Model):
     """A model with some number of agents."""
     def __init__(self, N, width, height):
+        self.running = True
         self.num_agents = N
         self.schedule = RandomActivation(self)
         self.grid = MultiGrid(width, height, True)
